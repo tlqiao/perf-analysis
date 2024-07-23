@@ -1,0 +1,47 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Performance Analysis</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="module" src="popup.js" defer></script>
+</head>
+
+<body>
+        <div class="flex-container">
+                <div class="flex-item">
+                        <label>File Name:</label>
+                        <input id="fileName"></input>
+                </div>
+                <div class="flex-item">
+                        <button id="screenshot">Screenshot</button>
+                </div>
+                <div class="flex-item">
+                        <div class="dropdown">
+                                <button onclick="toggleDropdown()">ChooseFile</button>
+                                <div id="fileDropdown" class="dropdown-content">
+                                        <a id="toggleAll" href="#">Toggle all</a>
+                                </div>
+                        </div>
+                </div>
+                <div class="flex-item">
+                        <button id="analysis">AnalysisPerf <div id="spinner" class="spinner" hidden> </div></button>
+                </div>
+        </div>
+        </div>
+        <div class="textarea-wrapper">
+                <div class="textarea-buttons">
+                        <button id="clear" class="little-button">Clear</button>
+                        <button id="copy" class="little-button">Copy</button>
+                </div>
+                <div>
+                        <textarea id="result" rows="20" cols="80"
+                                placeholder="Show performence analysis in here"></textarea>
+                </div>
+        </div>
+</body>
+
+</html>
